@@ -1,0 +1,90 @@
+
+.Buy__Lists_section{
+    min-height: 98vh;
+    padding-top: 75px;
+}
+
+.AddBuyList__Link {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%; 
+     transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(109, 179, 109);
+    width: 66px;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.AddBuyList__icon{
+    font-size: large;
+}
+
+.Buy__Lists{
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.Buy__list{
+    border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.Buy__list_delteEditGroup{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.Buy__list_deleteBtn{
+    visibility: hidden;
+}
+.Buy__list_editBtn{
+    visibility: hidden;
+}
+
+.Buy__list:hover button{
+    visibility: visible;
+}
+
+.Buy__list_name{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Buy__list_dateCreated{
+    margin-top: 0;
+    margin-left: 32px;
+}
+
+.Buy__list_form {
+    margin-left: 10px;
+    width: 60%;
+}
+
+.Buy__list_textarea {
+    padding: 3px;
+    margin-top: 5px;
+    width: 100%;
+}
+.Buy__list_updateBtnGroup{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Buy__list_updateBtnGroup button:last-child{
+    margin-left: 10px;
+}
+
+
+@media screen and (min-width: 500px) {
+    .Buy__list_form {
+        width: 40%;
+    }
+
+}

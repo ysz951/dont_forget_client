@@ -1,0 +1,26 @@
+.AddList{
+    padding-top: 120px;
+    min-height: 98vh;
+}
+.AddList h2{
+    text-align: center;
+}
+.AddList__Form{
+    /* margin-left: 20px; */
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(173, 198, 199);
+    margin: 0 auto;
+}
+
+#AddList__listName_input{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.AddList__listName_Btn{
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

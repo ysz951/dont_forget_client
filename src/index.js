@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faSearch, faStar, faUser, faPlus, faShoppingCart,
 faArrowRight, faSignInAlt, faSignOutAlt, faUserEdit, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-// import {BuyListsProvider} from './context/BuyListsContext';
+import {BuyListsProvider} from './context/BuyListsContext';
 library.add(
   faBars,
   faSearch,
@@ -23,7 +23,9 @@ library.add(
 );
 ReactDOM.render(
   <BrowserRouter>
+    <BuyListsProvider>
       <App />
+    </BuyListsProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

@@ -1,0 +1,59 @@
+.ListNav{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    position: fixed;
+    top: 51px;
+    width: 100%;
+    max-width: 900px;
+    background-color: rgb(196, 196, 196);
+}
+
+.ListNav li{
+    flex: 1;   
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.ListNav h2{
+    text-align: center;
+    margin: 0;
+    padding:10px;
+    /* color: rgb(83, 83, 83); */
+    /* padding-left: 5px; */
+    border: 0;
+    font-size: large;
+}
+
+.ListNav h2:hover{
+    opacity: 0.8;
+}
+
+
+.Seleted_Nav h2{
+    /* background-color: rgb(46, 46, 46); */
+    background-color: rgb(233, 233, 233);
+    color: #222;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    
+}
+
+/* .border_right h2{
+    border-right: 2px solid gray;
+}
+
+@media screen and (min-width: 900px) {
+
+    .border_left h2{
+    
+        border-left: 1px solid gray;
+    }
+    
+    .border_right h2{
+        border-right: 1px solid gray;
+    }
+} */

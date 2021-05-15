@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 // import NotFoundPage from './NotFoundPage/NotFoundPage';
-// import CurListsPage from './CurListsPage/CurListsPage';
-// import BuyItemList from './BuyItemList/BuyItemList';
+import CurListsPage from './CurListsPage/CurListsPage';
+import BuyItemList from './BuyItemList/BuyItemList';
 // import ShoppingPage from './ShoppingPage/ShoppingPage';
 import PublicOnlyRoute from './Route/PublicOnlyRoute';
 import PrivateRoute from './Route/PrivateRoute';
@@ -13,8 +13,8 @@ import TokenService from './services/token-service';
 import LandingPage from './LandingPage/LandingPage';
 import AuthApiService from './services/auth-api-service';
 import IdleService from './services/idle-service';
-// import AddList from './AddList/AddList';
-// import AddItem from './AddItem/AddItem';
+import AddList from './AddList/AddList';
+import AddItem from './AddItem/AddItem';
 import './App.css';
 class App extends Component {
   state = { hasError: false }
@@ -92,13 +92,13 @@ class App extends Component {
               path={'/'}
               component={LandingPage}
             />
-            {/* <PrivateRoute
+            <PrivateRoute
               exact
               path={'/buyLists'}
               component={CurListsPage}
               select="Now"
             />
-            <PrivateRoute
+            {/* <PrivateRoute
               exact
               path={'/nextLists'}
               component={CurListsPage}
@@ -112,11 +112,22 @@ class App extends Component {
               path={'/register'}
               component={RegistrationPage}
             />
-            {/* <PrivateRoute
+            <PrivateRoute
+              path={'/addbuylist'}
+              component={AddList}
+              select="Now"
+            />
+            <PrivateRoute
               path={'/buyLists/:listId'}
               component={BuyItemList}
               select="Now"
             />
+            <PrivateRoute
+              path={`/addBuyItem/:listId`}
+              component={AddItem}
+              select="Now"
+            />
+            {/* 
             <PrivateRoute
               exact
               path={'/nextLists/:listId'}
@@ -128,16 +139,8 @@ class App extends Component {
               component={ShoppingPage}
               select="Now"
             />
-            <PrivateRoute
-              path={'/addbuylist'}
-              component={AddList}
-              select="Now"
-            />
-            <PrivateRoute
-              path={`/addBuyItem/:listId`}
-              component={AddItem}
-              select="Now"
-            />
+            
+            
              <Route
               component={NotFoundPage}
             />   */}

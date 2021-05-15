@@ -1,0 +1,26 @@
+.AddItem{
+    padding-top: 120px;
+    min-height: 98vh;
+}
+
+.AddItem h2{
+    text-align: center;
+}
+
+.AddItem__Form{
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(173, 198, 199);
+    margin: 0 auto;
+}
+#AddItem__itemName_input{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.AddItem__itemName_Btn{
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -98,12 +98,12 @@ class App extends Component {
               component={CurListsPage}
               select="Now"
             />
-            {/* <PrivateRoute
+            <PrivateRoute
               exact
               path={'/nextLists'}
               component={CurListsPage}
               select="Next"
-            /> */}
+            />
             <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
@@ -126,6 +126,12 @@ class App extends Component {
               path={`/addBuyItem/:listId`}
               component={AddItem}
               select="Now"
+            />
+            <PrivateRoute
+              exact
+              path={'/nextLists/:listId'}
+              component={BuyItemList}
+              select="Next"
             />
             {/* 
             <PrivateRoute

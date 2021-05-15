@@ -13,7 +13,7 @@ export default class RegistrationForm extends Component {
     const { user_name, password } = ev.target;
     this.setState({ error: null });
     AuthApiService.postUser({
-      user_name: user_name.value,
+      username: user_name.value,
       password: password.value,
     })
       .then(user => {

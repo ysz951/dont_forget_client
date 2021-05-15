@@ -10,10 +10,9 @@ export default class LoginForm extends Component {
   handleSubmitBasicAuth = ev => {
     ev.preventDefault();
     this.setState({ error: null });
-    const { username, password } = ev.target;
-
+    const { user_name, password } = ev.target;
     AuthApiService.postLogin({
-      username: username ? username.value : "ysz951",
+      username: user_name ? user_name.value : "ysz951",
       password: password ? password.value : "ysz951",
     })
       .then(res => {

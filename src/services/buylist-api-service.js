@@ -54,7 +54,7 @@ const BuyListApiService = {
         )
     },
     getNextListById(listId) {
-        return fetch(`${config.API_ENDPOINT}/nextlists/${listId}`, {
+        return fetch(`${config.API_ENDPOINT}/list/${listId}`, {
             headers: {
                 'authorization': `Bearer ${TokenService.getAuthToken()}`,
             },
@@ -67,7 +67,7 @@ const BuyListApiService = {
         )
     },
     getNextListItems(listId) {
-        return fetch(`${config.API_ENDPOINT}/nextlists/${listId}/items`, {
+        return fetch(`${config.API_ENDPOINT}/list/${listId}/items`, {
             headers: {
                 'authorization': `Bearer ${TokenService.getAuthToken()}`,
             },
@@ -105,7 +105,7 @@ const BuyListApiService = {
             'authorization': `Bearer ${TokenService.getAuthToken()}`,
         },
         body: JSON.stringify({
-            list_name,
+            "listName": list_name
             
         }),
         })
@@ -147,7 +147,7 @@ const BuyListApiService = {
         })
     },
     deleteNextList(listId) {
-        return fetch(`${config.API_ENDPOINT}/nextlists/${listId}`, {
+        return fetch(`${config.API_ENDPOINT}/list/${listId}`, {
         method: 'DELETE',
         headers: {
             'authorization': `Bearer ${TokenService.getAuthToken()}`,

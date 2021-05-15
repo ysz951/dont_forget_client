@@ -147,12 +147,15 @@ export default class BuyItemList extends Component {
   }
 
   addBuy = (nextItems) => {
-    const nextName = this.state.listName;
+    // const nextName = this.state.listName;
+    const nextName = (format(new Date(), "yyyy-mm-dd hh-mm-ss")).toString();
     const {listId} = this.props.match.params;
+    console.log(nextName);
     BuyListApiService.postBuyList(nextName)
         .then(res => {
             this.context.addBuyList(res)
             const newNextList = res;
+            console.log(res);
             Promise.all(
                 nextItems.map(item => 
                     BuyListApiService.postItem(item.itemName, newNextList.id))
@@ -173,6 +176,7 @@ export default class BuyItemList extends Component {
       
       if (select === "Next") {
         const ListItems = this.context.items || [];
+        console.log(ListItems);
         this.addBuy(ListItems);
       }
       else {

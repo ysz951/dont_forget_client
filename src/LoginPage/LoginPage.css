@@ -1,0 +1,25 @@
+.LoginPage{
+    margin: 0 auto;
+    padding-top: 55px;
+    width: 90%;
+    height: 80vh;
+    
+}
+
+.LoginPage_Sign_up{
+    color: rgb(214, 0, 0);
+}
+.LoginPage_Sign_up:link{
+    color: rgb(214, 0, 0);
+}
+
+.LoginPage_Sign_up:visited{
+    color: rgb(214, 0, 0);
+}
+.LoginPage_Sign_up:hover{
+    color:rgb(189, 84, 84);
+}
+
+.LoginPage_Sign_up:active{
+    color:rgb(218, 138, 138);
+}

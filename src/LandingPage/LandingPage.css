@@ -1,0 +1,108 @@
+.LandingPage {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.LandingPage_image_group {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgb(233, 233, 233);
+    height: 100vh;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.LandingPage_image{
+    
+    opacity: 0.3;
+    width: 200px;
+    height: 200px;
+    background: url("https://dontforget-upload.s3.us-east-2.amazonaws.com/dont+forget+bubble.jpg");
+    background-size: cover;
+    background-position: 30% 50%;
+    margin-right: 50px;
+}
+
+
+.LandingPage_text_group{
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 25vh;
+    height: 100vh;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.LandingPage_text_group p{
+    margin-top: 0;
+    margin-bottom: 5vh;
+    text-align: center;
+    font-size: smaller;
+}
+
+.LandingPage_text_group h1{
+    margin-top: 0;
+    margin-bottom: 10vh;
+    text-align: center;
+    font-size:x-large;
+}
+
+
+.LandingPage_feature{
+    text-align: center;
+    margin: 5vh;
+    
+}
+
+.LandingPage_feature_last{
+    text-align: center;
+    margin-bottom: 10vh;
+    
+}
+
+.LandingPage_findMore{
+    text-align: center;
+}
+
+.LandingPage_findMore a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(230, 196, 173);
+    transition: 0.5s ease-out;
+}
+
+.LandingPage_findMore a:hover{
+    color: rgb(230, 196, 173);
+    background-color: #222;
+}
+
+@media screen and (min-width: 400px) {
+    .LandingPage_text_group p{
+        font-size: initial
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .LandingPage_text_group h1{
+        font-size: xx-large;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    .LandingPage_image{
+        width: 250px;
+        height: 250px;
+        background-position: 30% 50%;
+        margin-right: 30px;
+    }
+}

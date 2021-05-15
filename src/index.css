@@ -1,13 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200, 400');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Crimson+Text&family=Fredoka+One&family=Libre+Caslon+Display&family=Lora&family=Lustria&display=swap');
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  
+  /* background-color: rgb(233, 233, 233); */
 }
 
-code {
+html, body, #root{
+  min-height: 100vh;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+h1, h2, h3, h4, h5, h6 a p{
+  color: #222;
 }
+
+/* p {
+  color: #555;
+} */
+
+a:link{
+  color: #222;
+}
+
+a:visited{
+  color: #222;
+}
+
+a:active{
+  color: #222;
+}
+
+a:hover{
+  color: rgb(110, 91, 91);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* button style */
+button{
+  cursor: pointer;
+}
+
+.iconButton{
+  outline: none;
+  border: none;
+  background: none;
+}
+
+
+.btn_type_1{
+  order: 1px solid #aaa;
+  background-color: #eee;
+  font-size: 0.9em;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.btn_type_1:hover{
+  color:rgb(90, 90, 90);
+  background-color: rgb(201, 201, 201);
+}
+.btn_type_1:active{
+  box-shadow: 5px 5px 14px -6px rgba(0, 0, 0, 0.5);
+}
+
+.btn_type_2{
+  order: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(43, 43, 43);
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.btn_type_2:hover{
+  color:rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+}
+
+.btn_type_3{
+  order: none;
+  background-color: rgb(43, 69, 92);
+  border-color:rgb(67, 103, 133);
+  /* color: rgb(247, 247, 247); */
+  color: rgb(173, 173, 173);
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.btn_type_3:hover{
+  /* color:rgb(0, 0, 0); */
+  background-color:rgb(67, 103, 133);
+  color: rgb(247, 247, 247);
+}
+
+/* font size */
+.larger{
+  font-size:larger
+}
+.x-large{
+  font-size:x-large
+}
+
+/* font style */
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+/* font-family */
+.Acme {
+  font-family: 'Acme', sans-serif;
+}
+
+.Lustria{
+  font-family: 'Lustria', serif;
+}
+
+.Crimson{
+  font-family: 'Crimson Text', serif;
+}
+
+.Fredoka{
+  font-family: 'Fredoka One', cursive;
+}
+
+.Libre{
+  font-family: 'Libre Caslon Display', serif;
+}
+
+.Lora{
+  font-family: 'Lora', serif;
+}
+
+/* color */
+
+.light-grey{
+  color: rgb(173, 170, 170)
+}
+
+.brown{
+  color:rgb(110, 39, 39)
+}
+
+.black{
+  color: black;
+}
+
+.light-black {
+  color: #555;
+}
+
+.blue {
+  color: #477ACC;
+}
+
+.yellow {
+  color: #EAC435;
+}
+
+.green {
+  color: #09a55e;
+}
+
+.red {
+  color: #CA1551;
+}
+
+.orange {
+  color: #FB4D3D;
+} 

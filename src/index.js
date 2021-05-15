@@ -2,16 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars, faSearch, faStar, faUser, faPlus, faShoppingCart,
+faArrowRight, faSignInAlt, faSignOutAlt, faUserEdit, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+// import {BuyListsProvider} from './context/BuyListsContext';
+library.add(
+  faBars,
+  faSearch,
+  faStar,
+  faUser,
+  faArrowRight,
+  faSignInAlt,
+  faSignOutAlt,
+  faUserEdit,
+  faEdit,
+  faTrashAlt,
+  faShoppingCart,
+  faPlus,
+);
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

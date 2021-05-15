@@ -85,7 +85,7 @@ export class BuyListsProvider extends Component {
   updateNextList = (listId, list_name) => {
     const newNextLists = this.state.nextLists;
     const index = newNextLists.findIndex(list => list.id === listId);
-    newNextLists[index].list_name = list_name;
+    newNextLists[index].listName = list_name;
     this.setNextLists(newNextLists);
   }
   addNextList = nextList => {

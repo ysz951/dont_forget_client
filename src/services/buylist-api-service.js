@@ -15,7 +15,7 @@ const BuyListApiService = {
         )
     },
     getBuyListById(listId) {
-        return fetch(`${config.API_ENDPOINT}/buylists/${listId}`, {
+        return fetch(`${config.API_ENDPOINT}/list/${listId}`, {
             headers: {
                 'authorization': `Bearer ${TokenService.getAuthToken()}`,
             },
@@ -41,7 +41,7 @@ const BuyListApiService = {
         )
     },
     getNextLists() {
-        return fetch(`${config.API_ENDPOINT}/nextlists`, {
+        return fetch(`${config.API_ENDPOINT}/list/next`, {
             headers: {
                 'authorization': `Bearer ${TokenService.getAuthToken()}`,
             },
@@ -98,7 +98,7 @@ const BuyListApiService = {
         )
     },
     postNextList(list_name) {
-        return fetch(`${config.API_ENDPOINT}/nextlists`, {
+        return fetch(`${config.API_ENDPOINT}/list/next`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json',

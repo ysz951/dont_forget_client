@@ -39,12 +39,12 @@ export default class BuyItemList extends Component {
             .catch(err => this.context.setError(err.error))
         }
         else {
-            BuyListApiService.getNextListItems(listId)
-            .then(res => {
-                this.context.setItems(res.listItems);
-                this.setState({listName: res.listName});
-            })
-            .catch(err => this.context.setError(err.error))
+          BuyListApiService.getBuyListItems(listId)
+          .then(res => {
+              this.context.setItems(res);
+              this.setState({listName: res.listName});
+          })
+          .catch(err => this.context.setError(err.error))
         }
         
   }
@@ -53,7 +53,6 @@ export default class BuyItemList extends Component {
     this.context.clearItems();
   }
   renderItems(ListItems, select) {
-    console.log(ListItems);
     return ( 
         ListItems.map(item => 
             <li className="Buy_List_item" key = {item.id}>

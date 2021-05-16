@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-// import NotFoundPage from './NotFoundPage/NotFoundPage';
+import NotFoundPage from './NotFoundPage/NotFoundPage';
 import CurListsPage from './CurListsPage/CurListsPage';
 import BuyItemList from './BuyItemList/BuyItemList';
-// import ShoppingPage from './ShoppingPage/ShoppingPage';
+import ShoppingPage from './ShoppingPage/ShoppingPage';
 import PublicOnlyRoute from './Route/PublicOnlyRoute';
 import PrivateRoute from './Route/PrivateRoute';
 import Header from './Header/Header';
@@ -133,13 +133,7 @@ class App extends Component {
               component={BuyItemList}
               select="Next"
             />
-            {/* 
-            <PrivateRoute
-              exact
-              path={'/nextLists/:listId'}
-              component={BuyItemList}
-              select="Next"
-            />
+
             <PrivateRoute
               path={'/shopping/now/:listId'}
               component={ShoppingPage}
@@ -149,7 +143,7 @@ class App extends Component {
             
              <Route
               component={NotFoundPage}
-            />   */}
+            />  
           </Switch>
         </main>
       </div>

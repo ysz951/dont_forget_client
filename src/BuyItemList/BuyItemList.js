@@ -33,7 +33,7 @@ export default class BuyItemList extends Component {
         if (select === 'Now'){
             BuyListApiService.getBuyListItems(listId)
             .then(res => {
-                this.context.setItems(res);
+                this.context.setItems(res.listItems);
                 this.setState({listName: res.listName});
             })
             .catch(err => this.context.setError(err.error))
@@ -41,7 +41,7 @@ export default class BuyItemList extends Component {
         else {
           BuyListApiService.getBuyListItems(listId)
           .then(res => {
-              this.context.setItems(res);
+              this.context.setItems(res.listItems);
               this.setState({listName: res.listName});
           })
           .catch(err => this.context.setError(err.error))
@@ -148,7 +148,7 @@ export default class BuyItemList extends Component {
 
   addBuy = (nextItems) => {
     // const nextName = this.state.listName;
-    const nextName = (format(new Date(), "yyyy-mm-dd hh-mm-ss")).toString();
+    const nextName = (format(new Date(), "yyyy-MM-dd hh-mm-ss")).toString();
     const {listId} = this.props.match.params;
     console.log(nextName);
     BuyListApiService.postBuyList(nextName)
@@ -176,7 +176,6 @@ export default class BuyItemList extends Component {
       
       if (select === "Next") {
         const ListItems = this.context.items || [];
-        console.log(ListItems);
         this.addBuy(ListItems);
       }
       else {

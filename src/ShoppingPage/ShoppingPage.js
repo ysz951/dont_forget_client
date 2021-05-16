@@ -85,7 +85,7 @@ export default class Shopping extends Component {
             BuyListApiService.getBuyListItems(listId)
             .then(res => {
                 console.log(res);
-                this.context.setSelectedBuyList(res);
+                this.context.setSelectedBuyList(res.listItems);
                 this.setState({listName: res.listName});
             })
             .catch(err => this.context.setError(err.error))
@@ -93,7 +93,7 @@ export default class Shopping extends Component {
         else if (select === "Next"){
             BuyListApiService.getNextListItems(listId)
             .then(res => {
-                this.context.setSelectedBuyList(res);
+                this.context.setSelectedBuyList(res.listItems);
                 this.setState({listName: res.listName});
             })
             .catch(err => this.context.setError(err.error))
@@ -118,8 +118,8 @@ export default class Shopping extends Component {
     }
     addNext = (uncheckItems) => {
         const nextItems = uncheckItems.filter(item => this.context.nextSet.has(item.id));
-        // const nextName = this.state.listName + ' Next';
-        const nextName = (format(new Date(), "yyyy-mm-dd hh-mm-ss")).toString();
+        const nextName = this.state.listName + ' Next';
+        // const nextName = (format(new Date(), "yyyy-MM-dd hh-mm-ss")).toString();
         console.log(nextName);
         // add all uncheckItems to next list
         if (nextItems.length) {
@@ -149,8 +149,8 @@ export default class Shopping extends Component {
     addAll = (uncheckItems) => {
         // automatically add all uncheckItems to new nextlist
         const nextItems = uncheckItems;
-        // const nextName = this.state.listName + ' Next';
-        const nextName = (format(new Date(), "yyyy-mm-dd hh-mm-ss")).toString();
+        const nextName = this.state.listName + ' Next';
+        // const nextName = (format(new Date(), "yyyy-mm-dd hh-mm-ss")).toString();
         BuyListApiService.postNextList(nextName, 'Next')
             .then(res => {
                 this.context.addNextList(res)
@@ -169,6 +169,7 @@ export default class Shopping extends Component {
         
     render() {
         const ListItems = this.context.selectedBuyList || [];
+        console.log(ListItems);
         const {error} = this.context;
         const {listId} = this.props.match.params;
         const uncheckItems = this.state.uncheckItems || [];
